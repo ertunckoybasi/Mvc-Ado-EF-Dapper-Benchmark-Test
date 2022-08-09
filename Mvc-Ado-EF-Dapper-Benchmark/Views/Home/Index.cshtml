@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div>
+    <form method="post">
+        <input type="text" placeholder="Record Count to Add EF Core" name="count" />
+        <button asp-controller="Home" asp-action="AddProductEfCore">Insert With Ef Core</button>
+        <span></span>
+        <input type="text" placeholder="Result" name="Result" style="min-width:100%" value="@TempData["InsertResultEfCore"]" />
+        @{
+            TempData.Keep("InsertResultEfCore");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="post">
+        <input type="text" placeholder="Record Count to Add Ado.Net" name="count" />
+        <button asp-controller="Home" asp-action="AddProductAdoNet">Insert Ado.Net</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["InsertResultAdoNet"]" />
+        @{
+            TempData.Keep("InsertResultAdoNet");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="post">
+        <input type="text" placeholder="Record Count to Add Dapper" name="count" />
+        <button asp-controller="Home" asp-action="AddProductDapper">Insert Dapper</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["InsertResultDapper"]" />
+        @{
+            TempData.Keep("InsertResultDapper");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="get">
+
+        <button asp-controller="Home" asp-action="GetProductsEFCore">Get Products EFCore</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["GetResultEFCore"]" />
+        @{
+            TempData.Keep("GetResultEFCore");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="get">
+        <button asp-controller="Home" asp-action="GetProductsAdoNet">Get Products AdoNet</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["GetResultAdoNet"]" />
+        @{
+            TempData.Keep("GetResultAdoNet");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="get">
+        <button asp-controller="Home" asp-action="GetProductsDapper">Get Products Dapper</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["GetResultDapper"]" />
+        @{
+            TempData.Keep("GetResultDapper");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="get">
+        <button asp-controller="Home" asp-action="GetProductsWithCategoryEFCore">Get Products (Join Category) EFCore</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["GetResultEFCoreJoin"]" />
+        @{
+            TempData.Keep("GetResultEFCoreJoin");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="get">
+        <button asp-controller="Home" asp-action="GetProductsWithCategoryAdoNet">Get Products (Join Category) Adonet</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["GetResultAdoNetJoin"]" />
+        @{
+            TempData.Keep("GetResultAdoNetJoin");
+        }
+    </form>
+</div>
+
+<div><p style="font-size:10px;line-height:1;"><br /></p></div>
+
+<div>
+    <form method="get">
+        <button asp-controller="Home" asp-action="GetProductsWithCategoryDapper">Get Products (Join Category) Dapper</button>
+        <span></span>
+        <input type="text" name="Result" style="min-width:100%" value="@TempData["GetResultDapperJoin"]" />
+        @{
+            TempData.Keep("GetResultDapperJoin");
+        }
+    </form>
+</div>
+
